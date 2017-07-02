@@ -1,0 +1,36 @@
+﻿<Window x:Class="WindowsSpotlight.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsSpotlight"
+        mc:Ignorable="d"
+        Title="Windows Spotlight"
+        WindowState="Maximized"
+        MinWidth="900" MinHeight="600"
+        Loaded="Window_Loaded">
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Image Name="ImageBox">
+            <Image.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="" Click="Orientation_Click" Name="OrientationMenu"/>
+                    <MenuItem Header="Open in Chrome" Click="Chrome_Click"/>
+                    <MenuItem Header="Save as&#x2026;" Click="Save_Click"/>
+                    <MenuItem Header="Set as Wallpaper" Click="SetBackground_Click"/>
+                    <Separator />
+                    <MenuItem Header="Copy All Pictures" Click="CopyAll_Click"/>
+                    <MenuItem Header="Open Save Folder" Click="OpenFolder_Click"/>
+                    <Separator />
+                    <MenuItem Header="About" Click="About_Click"/>
+                </ContextMenu>
+            </Image.ContextMenu>
+        </Image>
+
+    </Grid>
+
+</Window>
